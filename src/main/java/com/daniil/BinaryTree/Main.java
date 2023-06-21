@@ -3,6 +3,8 @@ package com.daniil.BinaryTree;
 public class Main {
     public static void main(String[] args) {
         BinaryTreeLinkedList binaryTreeLinkedList = new BinaryTreeLinkedList();
+
+
         BinaryNode N1 = new BinaryNode();
         N1.values = "N1";
         BinaryNode N2 = new BinaryNode();
@@ -52,10 +54,19 @@ public class Main {
         binaryTreeLinkedList.search("N5");
         System.out.println("\n");
 
+        // Insert value in the tree
+        binaryTreeLinkedList.insert("N1");
+        binaryTreeLinkedList.insert("N2");
+        binaryTreeLinkedList.insert("N3");
+        binaryTreeLinkedList.insert("N4");
+        binaryTreeLinkedList.levelOrder();
+        System.out.println();
+//        binaryTreeLinkedList.deleteDeepestNode();
+        binaryTreeLinkedList.deleteNode("N4");
+        System.out.println();
+        binaryTreeLinkedList.levelOrder();
 
-
-
-
+        binaryTreeLinkedList.deleteBT();
 
     }
 
