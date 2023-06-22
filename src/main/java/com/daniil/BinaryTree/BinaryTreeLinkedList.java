@@ -38,7 +38,7 @@ public class BinaryTreeLinkedList {
     }
 
 
-    void levelOrder() {
+    public void levelOrder() {
         Queue<BinaryNode> queue = new LinkedList<BinaryNode>();
         queue.add(root);
         while (!queue.isEmpty()) {
@@ -73,7 +73,7 @@ public class BinaryTreeLinkedList {
         System.out.println("The value" + value + " is not found in Tree");
     }
 
-    void insert(String value) {
+    public void insert(String value) {
         BinaryNode newNode = new BinaryNode();
         newNode.values = value;
         if (root == null) {
@@ -140,7 +140,7 @@ public class BinaryTreeLinkedList {
 
     // Delete Given note
 
-    void deleteNode(String value) {
+    public void deleteNode(String value) {
         Queue<BinaryNode> queue = new LinkedList<>();
         queue.add(root);
         while (!queue.isEmpty()) {
@@ -159,7 +159,7 @@ public class BinaryTreeLinkedList {
         System.out.println("The note does not exist in the tree");
     }
 
-    void deleteBT() {
+    public void deleteBT() {
         root = null;
         System.out.println("BT has been successfully deleted");
     }
