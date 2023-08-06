@@ -1,6 +1,10 @@
 package com.daniil.Sorting;
 
 public class InsertionSort {
+    public static void main(String[] args) {
+        int[] x = new int[]{5, 9, 3, 1, 2, 8, 4, 7, 6, 4, 20, 43};
+        insertionSort(x);
+    }
 
 	// InsertionSort
   static void insertionSort(int[] arr) {

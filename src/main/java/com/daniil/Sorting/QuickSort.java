@@ -1,6 +1,13 @@
 package com.daniil.Sorting;
 
+import java.util.Arrays;
+
 public class QuickSort {
+    public static void main(String[] args) {
+        int [] x = new int[] {2,4,1,4,6,3,5,7,8,2};
+        quickSort(x, 0, x.length - 1);
+        System.out.println(Arrays.toString(x));
+    }
 
   static int partition(int[] array, int start, int end) {
     int pivot = end;

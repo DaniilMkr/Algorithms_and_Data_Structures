@@ -2,6 +2,11 @@ package com.daniil.Sorting;
 
 public class SelectionSort {
 
+    public static void main(String[] args) {
+        int[] x = new int[]{3, 2, 4, 30, 5, 4};
+        selectionSort(x);
+    }
+
   static void selectionSort(int[] a) {
     for (int j = 0; j < a.length; j++) {
       int minimumIndex = j;
