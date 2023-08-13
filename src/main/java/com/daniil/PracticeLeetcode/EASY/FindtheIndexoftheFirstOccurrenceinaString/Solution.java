@@ -1,34 +1,38 @@
 package com.daniil.PracticeLeetcode.EASY.FindtheIndexoftheFirstOccurrenceinaString;
 
 
+import java.util.Stack;
+
 public class Solution {
 
     public static void main(String[] args) {
-        int result = strStr("sabutsad", "sad");
+        int result = strStr("mississippi", "issip");
         System.out.println(result);
 
 
     }
 
     public static int strStr(String haystack, String needle) {
-        char[] array = needle.toCharArray();
         char[] x = haystack.toCharArray();
-        int counter = 0;
-        int second = 0;
+        char[] y = needle.toCharArray();
+        int index = 0;
+        int counter = Integer.MAX_VALUE;
         for (int i = 0; i < x.length; i++) {
-            int first = 0;
-            if (x[i] == array[second]) {
-                if (second == 0) {
-                    first = i;
+            if (x[i] == y[index] && x.length >= y.length) {
+                if (index == 0) {
+                    counter = i;
                 }
-                second++;
-                if (array.length == second) {
-                    return first;
+                index++;
+                if (index == y.length) {
+                    break;
                 }
+            } else {
+                index = 0;
+                counter = Integer.MAX_VALUE;
             }
-            else {
-                second = 0;
-            }
+        }
+        if (counter != Integer.MAX_VALUE) {
+            return counter;
         }
         return -1;
     }
