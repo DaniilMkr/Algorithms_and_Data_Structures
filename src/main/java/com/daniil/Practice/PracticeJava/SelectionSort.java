@@ -2,9 +2,14 @@ package com.daniil.Practice.PracticeJava;
 
 public class SelectionSort {
     public static void main(String[] args) {
-        String[] names = new String[]{"Австралия", "Сингапур", "Китай", "Россия", "Америка", "Япония"};
-        double[] data = new double[] {4.0, 5.6, 3.0, 3.9, 6.0, 7.0};
+        long start = System.currentTimeMillis();
+        String[] names = new String[]{"Австралия", "Сингапур", "Китай", "Россия", "Америка", "Япония",
+                "Франция", "Фуджи", "Бельгия", "Испания", "Германия", "Италия",
+                "Австралия"};
+        double[] data = new double[] {4.0, 5.6, 3.0, 3.9, 6.0, 7.0, 2.5, 4.8, 1.3, 7.9, 2.9, 9.0, 2.7};
         sortSales(names, data);
+        long finish = System.currentTimeMillis();
+        System.out.println(finish - start);
     }
 
     static void sortSales(String[] names, double[] data ){
@@ -43,6 +48,7 @@ public class SelectionSort {
                 data[minInd] = tempMin;
                 names[maxInd] = stMax;
                 names[minInd] = stMin;
+                printData(names, data); // вызвать метод для отображения данных в консоль
 
             }
         }

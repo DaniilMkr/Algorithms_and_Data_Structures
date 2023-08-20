@@ -1,4 +1,4 @@
-package com.daniil.Recursion;
+package com.daniil.Practice.PracticeJava.Recursion;
 
 class Main {
   public static void main(String[] args) {

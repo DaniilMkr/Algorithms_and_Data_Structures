@@ -1,4 +1,4 @@
-package com.daniil.Recursion.Fibonacci;
+package com.daniil.Practice.PracticeJava.Recursion.Fibonacci;
 
 class Main {
   public static void main(String[] args) {
