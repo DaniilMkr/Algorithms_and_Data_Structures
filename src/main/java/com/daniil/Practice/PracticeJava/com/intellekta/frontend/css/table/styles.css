@@ -1,0 +1,25 @@
+
+
+table{
+font-size: 30px;
+font:Impact;
+border:2px solid;
+}
+
+caption{
+font-family: Impact;
+color: #32CD32;
+}
+
+tr:nth-child(even) {
+background-color: #D3D3D3;
+}
+
+tr:nth-child(odd) {
+background-color: #98FB98;
+}
+
+th{
+font-weight: bold
+}
+
