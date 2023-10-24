@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="
+        http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <bean id="engineId" class="com.daniil.Practice.PracticeJava.com.intellekta.spring.car.Engine">
+        <property name="capacity" value="3200"/>
+        <property name="horsePower" value="250"/>
+        <property name="numberOfCylinders" value="6"/>
+
+    </bean>
+
+    <bean id="carId" class="com.daniil.Practice.PracticeJava.com.intellekta.spring.car.Car">
+        <property name="make" value="Toyota"/>
+        <property name="model" value="Camry"/>
+        <property name="engine" value="#{engineId}"/>
+        <property name="horsePower" value="#{engineId.horsePower}"/>
+    </bean>
+
+    <bean id="tester" class="com.daniil.Practice.PracticeJava.com.intellekta.spring.car.ClassTester">
+        <property name="goodCar" value="#{carId.horsePower >= 250 and carId.engine.capacity lt 4000}"/>
+        <property name="greatCar" value="#{carId.horsePower > 300 or carId.engine.capacity > 3000}"/>
+        <property name="carInfo" value="#{carId.model + ' manufactured by ' + carId.make}"/>
+    </bean>
+
+</beans>

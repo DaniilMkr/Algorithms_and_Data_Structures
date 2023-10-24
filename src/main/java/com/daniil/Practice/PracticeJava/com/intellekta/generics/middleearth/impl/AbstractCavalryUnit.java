@@ -3,45 +3,49 @@ package com.daniil.Practice.PracticeJava.com.intellekta.generics.middleearth.imp
 import com.daniil.Practice.PracticeJava.com.intellekta.generics.middleearth.Cavalry;
 import java.util.Random;
 
-public class AbstractCavalryUnit <T extends AbstructUnit> implements Cavalry {
+public class AbstractCavalryUnit <T> extends AbstructUnit implements Cavalry {
 
     private String name;
-    private T beast;
+
     private int power;
 
-    public AbstractCavalryUnit(String name ,int minPower, int maxPower) {
-        if (name == null || name.isBlank() || name.isEmpty()) {
-            this.name = super.toString();
-        }
-        else this.name = name;
-        this.power = new Random().nextInt(minPower, maxPower);
+    private T beast;
 
+    public int getPower() {
+        return power;
     }
 
-    public T getBeast() {
-        return beast;
+    public AbstractCavalryUnit(String name , int minPower, int maxPower) {
+        super(name, minPower, maxPower);
+    }
+
+    public AbstructUnit getBeast() {
+        return (AbstructUnit) beast;
     }
 
     public void setBeast(T beast) {
         this.beast = beast;
     }
 
-    public <T extends AbstractCavalryUnit> void strike(T beast) {
-        if (beast.getBeast().isAlive()) {
-            beast.getBeast().getDamage(power);
-        }
-        else {
-            if (beast.isAlive()) {
-                beast.getDamage(power);
-            }
-        }
-    }
     public int getDamage(int damage) {
         return this.power = AbstractCavalryUnit.this.power - damage;
     }
+
     public boolean isAlive() {
         return power > 0;
     }
+
+
+    public <T extends AbstractCavalryUnit> void strike(T beast) {
+        if ((((AbstractCavalryUnit<?>)beast).getBeast().isAlive())) {
+            getBeast().getDamage(power);
+        }
+        else {
+            beast.getDamage(power);
+        }
+    }
+
+
     public class Horse extends AbstructUnit {
         public Horse() {
             super(4, 5);

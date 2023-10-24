@@ -1,0 +1,36 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>Example</title>
+  <script>
+    function show() {
+      var elem = document.getElementsByTagName("div");
+      for (let i = 0; i < elem.length; i++) {
+        elem[i].hidden = false;
+        let text = "Строка " + (i + 1);
+        if (elem[i].childNodes.length == 0) { 
+          elem[i].insertAdjacentText("beforeend", text);
+        }
+      }
+    }
+
+    function hide() {
+      var elem = document.getElementsByName("choice");
+      for (let i = 0; i < elem.length; i++) {
+        elem[i].hidden = true; 
+      }
+    }
+
+  </script>
+</head>
+<body>
+<div name="choice"></div>
+<div name="choice"></div>
+<div name="choice"></div>
+<div name="choice"></div>
+<div name="choice"></div>
+<button onclick="show()" >Показать текст</button>
+<button onClick="hide()">Скрыть текст</button>
+</body>
+</html>

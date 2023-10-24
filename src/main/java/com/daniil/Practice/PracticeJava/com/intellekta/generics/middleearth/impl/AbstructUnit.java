@@ -1,9 +1,12 @@
 package com.daniil.Practice.PracticeJava.com.intellekta.generics.middleearth.impl;
 
 import com.daniil.Practice.PracticeJava.com.intellekta.generics.middleearth.Infantry;
+import com.daniil.Practice.PracticeJava.com.intellekta.generics.middleearth.Unit;
+
 import java.util.Random;
 
 public class AbstructUnit implements Infantry {
+
     private String name;
     private int power;
 
@@ -19,6 +22,7 @@ public class AbstructUnit implements Infantry {
         this.power = new Random().nextInt(minPower, maxPower);
     }
 
+
     public <T extends AbstructUnit> void strike(T unit) {
         if (unit.isAlive()) {
             unit.getDamage(this.power);
@@ -33,7 +37,15 @@ public class AbstructUnit implements Infantry {
         return this.power = AbstructUnit.this.power - damage;
     }
 
+    @Override
     public String toString() {
-        return this.getClass().getSimpleName() + " has power " + this.power;
+        return this.getClass().getSimpleName() + " " + this.name + " has power " + this.power;
+    }
+
+    public String consequence() {
+        if (isAlive()) {
+            return "does not kill him";
+        }
+        return "kills him";
     }
 }

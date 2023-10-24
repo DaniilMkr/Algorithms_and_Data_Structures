@@ -5,13 +5,17 @@ import java.util.ArrayList;
 import java.util.Comparator;
 import java.util.Random;
 
-public class Army <T extends Unit> implements MordorUnit, MiddleEarthUnit {
+public abstract class Army <T extends Unit> implements MordorUnit, MiddleEarthUnit {
 
     private ArrayList<Infantry> infantries = new ArrayList<>();
     private ArrayList<Cavalry> cavalry = new ArrayList<>();
     private int size;
-    private ArrayList<T> armyList = new ArrayList<>(size);
+    private ArrayList<T> armyList;
 
+
+    public Army() {
+        this.armyList = new ArrayList<>(getSize());
+    }
 
     public ArrayList<Cavalry> getCavalry() {
         if (cavalry == null) {
@@ -36,15 +40,11 @@ public class Army <T extends Unit> implements MordorUnit, MiddleEarthUnit {
     }
 
     public int getSize() {
-        return armyList.size();
+        return size;
     }
 
     public void setSize(int size) {
         this.size = size;
-    }
-
-    public AbstructUnit getLast() {
-        return (AbstructUnit) armyList.get(armyList.size() - 1);
     }
 
 
@@ -84,8 +84,9 @@ public class Army <T extends Unit> implements MordorUnit, MiddleEarthUnit {
     }
 
     public T getRandomUnit() {
+        int random = new Random().nextInt(0, armyList.size());
         for (int i = 0; i < armyList.size(); i++) {
-            if (new Random().nextInt() == i) {
+            if (random == i) {
                 if (armyList.get(i) instanceof Cavalry) {
                     return armyList.get(i);
                 } else if (armyList.get(i) instanceof Infantry) {
@@ -97,8 +98,9 @@ public class Army <T extends Unit> implements MordorUnit, MiddleEarthUnit {
     }
 
     public T getRandomUnit(T unit) {
+        int random = new Random().nextInt(0, armyList.size());
         for (int i = 0; i < armyList.size(); i++) {
-            if (new Random().nextInt() == i) {
+            if (random == i) {
                 if (armyList.get(i) instanceof Cavalry && unit instanceof Cavalry) {
                     return armyList.get(i);
                 } else if (armyList.get(i) instanceof Infantry && unit instanceof Infantry) {
@@ -108,5 +110,7 @@ public class Army <T extends Unit> implements MordorUnit, MiddleEarthUnit {
         }
         return null;
     }
+
+
 }
 

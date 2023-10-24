@@ -1,3 +1,9 @@
 package com.daniil.Practice.PracticeJava.com.intellekta.generics.middleearth;
 
-public interface Infantry extends Unit {}
+import com.daniil.Practice.PracticeJava.com.intellekta.generics.middleearth.impl.AbstructUnit;
+
+public interface Infantry extends Unit {
+
+
+
+}

@@ -1,0 +1,349 @@
+<!doctype html>
+
+<html>
+
+<head>
+
+    <meta charset="utf-8">
+
+    <title>Example</title>
+
+    <script>
+
+        function count(){
+            var myset = new Set;
+            var c = document.getElementsByTagName("td");
+            for (let i = 0; i < c.length; i++) {
+                if (/[^\w\s]/gi.test(c[i])){
+                    myset.add(c[i]);
+                }     
+            }
+            alert("Уникальных товаров в магазине: " + myset.size);
+            
+        }
+
+    </script>
+
+</head>
+
+<body>
+
+<table border="2px" width="100%">
+
+    <tr style="background-color: #AFAFAF;">
+
+        <td>????????????</td>
+
+        <td>???? ???.</td>
+
+        <td>???-?? ?? ?????? ??.</td>
+
+    </tr>
+
+    <tr>
+
+        <td>???? "Orto"</td>
+
+        <td>1000</td>
+
+        <td>250</td>
+
+    </tr>
+
+    <tr>
+
+        <td>???? "Comfort"</td>
+
+        <td>2500</td>
+
+        <td>100</td>
+
+    </tr>
+
+    <tr>
+
+        <td>???? "Big"</td>
+
+        <td>12000</td>
+
+        <td>35</td>
+
+    </tr>
+
+    <tr>
+
+        <td>???? "Medium"</td>
+
+        <td>8000</td>
+
+        <td>60</td>
+
+    </tr>
+
+    <tr>
+
+        <td>???? "Small"</td>
+
+        <td>5000</td>
+
+        <td>20</td>
+
+    </tr>
+
+    <tr>
+
+        <td>???? "Idol"</td>
+
+        <td>10000</td>
+
+        <td>100</td>
+
+    </tr>
+
+    <tr>
+
+        <td>??????? "Sleep"</td>
+
+        <td>25000</td>
+
+        <td>30</td>
+
+    </tr>
+
+    <tr>
+
+        <td>????? "Divan"</td>
+
+        <td>40000</td>
+
+        <td>30</td>
+
+    </tr>
+
+    <tr>
+
+        <td>???? "LunchTime"</td>
+
+        <td>8000</td>
+
+        <td>120</td>
+
+    </tr>
+
+    <tr>
+
+        <td>???? "Long"</td>
+
+        <td>10000</td>
+
+        <td>200</td>
+
+    </tr>
+
+    <tr>
+
+        <td>??????? "BedTime"</td>
+
+        <td>30000</td>
+
+        <td>9</td>
+
+    </tr>
+
+    <tr>
+
+        <td>?????? "Comfort"</td>
+
+        <td>8000</td>
+
+        <td>120</td>
+
+    </tr>
+
+    <tr>
+
+        <td>?????? "Rick"</td>
+
+        <td>5000</td>
+
+        <td>50</td>
+
+    </tr>
+
+    <tr>
+
+        <td>???? "Shkaf"</td>
+
+        <td>20000</td>
+
+        <td>53</td>
+
+    </tr>
+
+    <tr>
+
+        <td>????? "Mini"</td>
+
+        <td>4000</td>
+
+        <td>24</td>
+
+    </tr>
+
+    <tr>
+
+        <td>???? "Elbat"</td>
+
+        <td>2500</td>
+
+        <td>180</td>
+
+    </tr>
+
+    <tr>
+
+        <td>???? "Niatnoum"</td>
+
+        <td>50000</td>
+
+        <td>15</td>
+
+    </tr>
+
+    <tr>
+
+        <td>???? "Gib"</td>
+
+        <td>12000</td>
+
+        <td>35</td>
+
+    </tr>
+
+    <tr>
+
+        <td>???? "Muidem"</td>
+
+        <td>8000</td>
+
+        <td>60</td>
+
+    </tr>
+
+    <tr>
+
+        <td>???? "Llams"</td>
+
+        <td>5000</td>
+
+        <td>20</td>
+
+    </tr>
+
+    <tr>
+
+        <td>???? "Lodi"</td>
+
+        <td>10000</td>
+
+        <td>100</td>
+
+    </tr>
+
+    <tr>
+
+        <td>??????? "Peels"</td>
+
+        <td>25000</td>
+
+        <td>30</td>
+
+    </tr>
+
+    <tr>
+
+        <td>????? "Navid"</td>
+
+        <td>40000</td>
+
+        <td>30</td>
+
+    </tr>
+
+    <tr>
+
+        <td>???? "EmithHcnul"</td>
+
+        <td>8000</td>
+
+        <td>120</td>
+
+    </tr>
+
+    <tr>
+
+        <td>???? "Gnol"</td>
+
+        <td>10000</td>
+
+        <td>200</td>
+
+    </tr>
+
+    <tr>
+
+        <td>??????? "EmitDeb"</td>
+
+        <td>30000</td>
+
+        <td>9</td>
+
+    </tr>
+
+    <tr>
+
+        <td>?????? "Trofmoc"</td>
+
+        <td>8000</td>
+
+        <td>120</td>
+
+    </tr>
+
+    <tr>
+
+        <td>?????? "Kcir"</td>
+
+        <td>5000</td>
+
+        <td>50</td>
+
+    </tr>
+
+    <tr>
+
+        <td>???? "Fkash"</td>
+
+        <td>20000</td>
+
+        <td>53</td>
+
+    </tr>
+
+    <tr>
+
+        <td>????? "Inim"</td>
+
+        <td>4000</td>
+
+        <td>24</td>
+
+    </tr>
+
+    <button style="width: 200px; height: 40px;" onclick="count()">Count</button>
+
+</table>
+
+</body>
+
+</html>

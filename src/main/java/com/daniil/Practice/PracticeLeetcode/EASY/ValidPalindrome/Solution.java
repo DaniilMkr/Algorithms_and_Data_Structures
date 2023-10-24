@@ -1,4 +1,4 @@
-package com.daniil.Practice.PracticeLeetcode.EASY.ValidAnagram.ValidPalindrome;
+package com.daniil.Practice.PracticeLeetcode.EASY.ValidPalindrome;
 
 
 public class Solution {

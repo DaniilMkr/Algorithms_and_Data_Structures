@@ -1,3 +1,8 @@
 package com.daniil.Practice.PracticeJava.com.intellekta.generics.middleearth;
 
-public interface Unit {}
+import com.daniil.Practice.PracticeJava.com.intellekta.generics.middleearth.impl.AbstractCavalryUnit;
+import com.daniil.Practice.PracticeJava.com.intellekta.generics.middleearth.impl.AbstructUnit;
+
+public interface Unit {
+
+}
